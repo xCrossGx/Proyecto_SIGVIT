@@ -1,17 +1,33 @@
 const express = require('express');
 const mqtt = require('mqtt');
+const fs = require('fs'); // <--- 1. Importar el módulo de archivos
+const path = './pacientes.json'; // Nombre del archivo
 
 const app = express();
-
-// --- MIDDLEWARE ---
-// Esto es vital para que app.post y app.put puedan leer el JSON que envías
 app.use(express.json());
 
-// --- "Base de Datos" en memoria ---
-let pacientes = [];
-let dispositivosData = {}; 
+// --- FUNCIONES DE AYUDA (Lectura/Escritura) ---
 
-// --- CONFIGURACIÓN MQTT ---
+const leerArchivo = () => {
+    try {
+        const data = fs.readFileSync(path, 'utf8');
+        return JSON.parse(data);
+    } catch (error) {
+        // Si el archivo no existe, devolvemos un array vacío
+        return [];
+    }
+};
+
+const guardarArchivo = (data) => {
+    try {
+        fs.writeFileSync(path, JSON.stringify(data, null, 2));
+    } catch (error) {
+        console.error("Error al guardar el archivo:", error);
+    }
+};
+
+// --- MQTT (Se mantiene igual) ---
+let dispositivosData = {}; 
 const client = mqtt.connect('mqtt://broker.hivemq.com'); 
 
 client.on('connect', () => {
@@ -23,83 +39,85 @@ client.on('message', (topic, message) => {
     try {
         const payload = JSON.parse(message.toString());
         const espId = topic.split('/')[2]; 
-
         dispositivosData[espId] = {
-            espId: espId,
-            tempInfrarrojo: payload.tempIR,    
-            tempContacto: payload.tempContact, 
-            ecg: payload.ecgValue,             
+            espId,
+            tempInfrarrojo: payload.tempIR,
+            tempContacto: payload.tempContact,
+            ecg: payload.ecgValue,
             ultimaActualizacion: new Date().toLocaleTimeString()
         };
-
-        console.log(`📥 Datos de ${espId}: IR:${payload.tempIR}° | Tacto:${payload.tempContact}° | ECG:${payload.ecgValue}`);
-    } catch (error) {
-        console.error("Error procesando mensaje MQTT", error);
-    }
+    } catch (e) { console.log("Error MQTT"); }
 });
 
-// --- ENDPOINTS PARA PACIENTES (Procesando el JSON solicitado) ---
+// --- ENDPOINTS MODIFICADOS PARA USAR EL ARCHIVO ---
 
-// 1. Obtener todos los pacientes
 app.get('/api/pacientes', (req, res) => {
+    const pacientes = leerArchivo(); // Lee del archivo antes de enviar
     res.json(pacientes);
 });
 
-// 2. Crear paciente (Recibe: nombre, apellido, cedula, fecha_nac)
 app.post('/api/pacientes', (req, res) => {
-    // Extraemos los datos del JSON recibido en req.body
+    const pacientes = leerArchivo(); // 1. Cargamos la lista actual desde el archivo
     const { nombre, apellido, cedula, fecha_nac } = req.body;
 
-    // Validación básica
+    // Validación de campos obligatorios
     if (!nombre || !cedula) {
         return res.status(400).json({ error: "Faltan datos obligatorios (nombre o cedula)" });
     }
 
-    const nuevoPaciente = {
-        id: Date.now(), // Generamos ID único numérico
-        nombre,
-        apellido,
-        cedula,
-        fecha_nac
-    };
+    // --- NUEVA VALIDACIÓN DE CÉDULA ---
+    // Buscamos si ya existe alguien con la misma cédula
+    const existe = pacientes.some(p => p.cedula === cedula);
 
-    pacientes.push(nuevoPaciente);
-    console.log("👤 Nuevo paciente registrado:", nuevoPaciente);
+    if (existe) {
+        console.log(`⚠️ Intento de duplicado: La cédula ${cedula} ya existe.`);
+        return res.status(400).json({ 
+            error: "Operación fallida", 
+            mensaje: "Ya existe un paciente registrado con esta cédula." 
+        });
+    }
+    // ----------------------------------
+
+    const nuevoPaciente = { 
+        id: Date.now(), 
+        nombre, 
+        apellido, 
+        cedula, 
+        fecha_nac 
+    };
+    
+    pacientes.push(nuevoPaciente); 
+    guardarArchivo(pacientes); // 3. Guardamos en el archivo físico
+
+    console.log("👤 Nuevo paciente registrado con éxito:", nombre);
     res.status(201).json(nuevoPaciente);
 });
 
-// 3. Modificar paciente por ID
 app.put('/api/pacientes/:id', (req, res) => {
-    const { id } = req.params;
-    const index = pacientes.findIndex(p => p.id == id);
+    let pacientes = leerArchivo();
+    const index = pacientes.findIndex(p => p.id == req.params.id);
 
     if (index !== -1) {
-        // Combinamos los datos actuales con los nuevos del JSON recibido
         pacientes[index] = { ...pacientes[index], ...req.body };
-        console.log(`📝 Paciente ID ${id} actualizado`);
+        guardarArchivo(pacientes); // Guardar cambios
         res.json(pacientes[index]);
     } else {
-        res.status(404).json({ error: "Paciente no encontrado" });
+        res.status(404).json({ error: "No encontrado" });
     }
 });
 
-// 4. Eliminar paciente
 app.delete('/api/pacientes/:id', (req, res) => {
-    const { id } = req.params;
-    const inicialLength = pacientes.length;
-    pacientes = pacientes.filter(p => p.id != id);
+    let pacientes = leerArchivo();
+    const nuevosPacientes = pacientes.filter(p => p.id != req.params.id);
 
-    if (pacientes.length < inicialLength) {
-        res.json({ mensaje: `Paciente con ID ${id} eliminado correctamente` });
+    if (pacientes.length !== nuevosPacientes.length) {
+        guardarArchivo(nuevosPacientes); // Guardar lista actualizada
+        res.json({ mensaje: "Eliminado" });
     } else {
-        res.status(404).json({ error: "Paciente no encontrado" });
+        res.status(404).json({ error: "No encontrado" });
     }
 });
 
-// --- ENDPOINT PARA DISPOSITIVOS ---
+app.get('/api/dispositivos', (req, res) => res.json(Object.values(dispositivosData)));
 
-app.get('/api/dispositivos', (req, res) => {
-    res.json(Object.values(dispositivosData));
-});
-
-app.listen(3000, () => console.log('🚀 Servidor API en puerto 3000'));
+app.listen(3000, () => console.log('🚀 Servidor con persistencia en puerto 3000'));

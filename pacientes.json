@@ -1,16 +1,30 @@
 [
-    {
-        "id": 1706712345678,
-        "nombre": "Ana",
-        "apellido": "García",
-        "cedula": "25.888.999",
-        "fecha_nacimiento": "1985-12-01"
-    },
-    {
-        "id": 1706712345679,
-        "nombre": "Luis",
-        "apellido": "Rodríguez",
-        "cedula": "12.333.444",
-        "fecha_nacimiento": "1978-03-22"
-    }
+  {
+    "id": 1706712345678,
+    "nombre": "Ana",
+    "apellido": "García",
+    "cedula": "25.888.999",
+    "fecha_nacimiento": "1985-12-01"
+  },
+  {
+    "id": 1706712345679,
+    "nombre": "Luis",
+    "apellido": "Rodríguez",
+    "cedula": "12.333.444",
+    "fecha_nacimiento": "1978-03-22"
+  },
+  {
+    "id": 1769893765466,
+    "nombre": "Andrés",
+    "apellido": "Mendoza",
+    "cedula": "20.123.456",
+    "fecha_nac": "1990-05-15"
+  },
+  {
+    "id": 1769893996814,
+    "nombre": "Andrés",
+    "apellido": "Mendoza",
+    "cedula": "20.123.458",
+    "fecha_nac": "1990-05-15"
+  }
 ]
