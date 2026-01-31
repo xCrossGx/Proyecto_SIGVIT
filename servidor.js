@@ -2,6 +2,9 @@ const express = require('express');
 const mqtt = require('mqtt');
 
 const app = express();
+
+// --- MIDDLEWARE ---
+// Esto es vital para que app.post y app.put puedan leer el JSON que envías
 app.use(express.json());
 
 // --- "Base de Datos" en memoria ---
@@ -9,26 +12,23 @@ let pacientes = [];
 let dispositivosData = {}; 
 
 // --- CONFIGURACIÓN MQTT ---
-// Conexión al broker (usa la IP de tu servidor o un broker público)
 const client = mqtt.connect('mqtt://broker.hivemq.com'); 
 
 client.on('connect', () => {
     console.log('✅ Conectado al Broker MQTT');
-    // Suscribirse a los tópicos de los monitores
     client.subscribe('hospital/monitores/+/data'); 
 });
 
 client.on('message', (topic, message) => {
     try {
         const payload = JSON.parse(message.toString());
-        const espId = topic.split('/')[2]; // Extrae el ID del ESP32
+        const espId = topic.split('/')[2]; 
 
-        // Estructura que viene de los sensores del ESP32
         dispositivosData[espId] = {
             espId: espId,
-            tempInfrarrojo: payload.tempIR,    // Sensor IR
-            tempContacto: payload.tempContact, // Sensor Tacto
-            ecg: payload.ecgValue,             // Valor del Electrocardiograma
+            tempInfrarrojo: payload.tempIR,    
+            tempContacto: payload.tempContact, 
+            ecg: payload.ecgValue,             
             ultimaActualizacion: new Date().toLocaleTimeString()
         };
 
@@ -38,39 +38,67 @@ client.on('message', (topic, message) => {
     }
 });
 
-// --- ENDPOINTS PARA PACIENTES ---
+// --- ENDPOINTS PARA PACIENTES (Procesando el JSON solicitado) ---
 
-// Obtener todos
-app.get('/api/pacientes', (req, res) => res.json(pacientes));
-
-// Crear paciente
-app.post('/api/pacientes', (req, res) => {
-    const nuevo = { id: Date.now(), ...req.body };
-    pacientes.push(nuevo);
-    res.status(201).json(nuevo);
+// 1. Obtener todos los pacientes
+app.get('/api/pacientes', (req, res) => {
+    res.json(pacientes);
 });
 
-// Modificar paciente
+// 2. Crear paciente (Recibe: nombre, apellido, cedula, fecha_nac)
+app.post('/api/pacientes', (req, res) => {
+    // Extraemos los datos del JSON recibido en req.body
+    const { nombre, apellido, cedula, fecha_nac } = req.body;
+
+    // Validación básica
+    if (!nombre || !cedula) {
+        return res.status(400).json({ error: "Faltan datos obligatorios (nombre o cedula)" });
+    }
+
+    const nuevoPaciente = {
+        id: Date.now(), // Generamos ID único numérico
+        nombre,
+        apellido,
+        cedula,
+        fecha_nac
+    };
+
+    pacientes.push(nuevoPaciente);
+    console.log("👤 Nuevo paciente registrado:", nuevoPaciente);
+    res.status(201).json(nuevoPaciente);
+});
+
+// 3. Modificar paciente por ID
 app.put('/api/pacientes/:id', (req, res) => {
-    const index = pacientes.findIndex(p => p.id == req.params.id);
+    const { id } = req.params;
+    const index = pacientes.findIndex(p => p.id == id);
+
     if (index !== -1) {
+        // Combinamos los datos actuales con los nuevos del JSON recibido
         pacientes[index] = { ...pacientes[index], ...req.body };
+        console.log(`📝 Paciente ID ${id} actualizado`);
         res.json(pacientes[index]);
     } else {
-        res.status(404).send("Paciente no encontrado");
+        res.status(404).json({ error: "Paciente no encontrado" });
     }
 });
 
-// Eliminar paciente
+// 4. Eliminar paciente
 app.delete('/api/pacientes/:id', (req, res) => {
-    pacientes = pacientes.filter(p => p.id != req.params.id);
-    res.send({ mensaje: "Paciente eliminado" });
+    const { id } = req.params;
+    const inicialLength = pacientes.length;
+    pacientes = pacientes.filter(p => p.id != id);
+
+    if (pacientes.length < inicialLength) {
+        res.json({ mensaje: `Paciente con ID ${id} eliminado correctamente` });
+    } else {
+        res.status(404).json({ error: "Paciente no encontrado" });
+    }
 });
 
-// --- ENDPOINT PARA DISPOSITIVOS (Signos Vitales) ---
+// --- ENDPOINT PARA DISPOSITIVOS ---
 
 app.get('/api/dispositivos', (req, res) => {
-    // Retorna la lista de todos los ESP32 activos con sus sensores
     res.json(Object.values(dispositivosData));
 });
 

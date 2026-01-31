@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1706712345678,
+        "nombre": "Ana",
+        "apellido": "García",
+        "cedula": "25.888.999",
+        "fecha_nacimiento": "1985-12-01"
+    },
+    {
+        "id": 1706712345679,
+        "nombre": "Luis",
+        "apellido": "Rodríguez",
+        "cedula": "12.333.444",
+        "fecha_nacimiento": "1978-03-22"
+    }
+]
