@@ -2,6 +2,7 @@ const express = require('express');
 const mqtt = require('mqtt');
 const fs = require('fs'); // <--- 1. Importar el módulo de archivos
 const path = './pacientes.json'; // Nombre del archivo
+require('dotenv').config()
 
 const app = express();
 app.use(express.json());
@@ -27,25 +28,31 @@ const guardarArchivo = (data) => {
 };
 
 // --- MQTT (Se mantiene igual) ---
-let dispositivosData = {}; 
-const client = mqtt.connect('mqtt://broker.hivemq.com'); 
+let dispositivosData = new Map(); 
+const mqttHost = process.env.MQTT_HOST || "localhost"
+const mqttPort = process.env.MQTT_PORT || 1883
+const client = mqtt.connect('mqtt://'+mqttHost+':'+mqttPort, {username: process.env.MQTT_USERNAME, password: process.env.MQTT_PASSWORD});; 
 
 client.on('connect', () => {
     console.log('✅ Conectado al Broker MQTT');
-    client.subscribe('hospital/monitores/+/data'); 
+    client.subscribe('devices/#'); 
 });
 
 client.on('message', (topic, message) => {
     try {
         const payload = JSON.parse(message.toString());
-        const espId = topic.split('/')[2]; 
-        dispositivosData[espId] = {
-            espId,
-            tempInfrarrojo: payload.tempIR,
-            tempContacto: payload.tempContact,
-            ecg: payload.ecgValue,
-            ultimaActualizacion: new Date().toLocaleTimeString()
-        };
+        const id = payload.mac
+        
+        if(id) {
+            dispositivosData.set(id, {
+                timestamp: payload.timestamp,
+                data: {
+                    temp1: payload.data.temp1,
+                    temp2: payload.data.temp2,
+                }
+            })
+            //console.log(dispositivosData[id])
+        }
     } catch (e) { console.log("Error MQTT"); }
 });
 
@@ -118,6 +125,18 @@ app.delete('/api/pacientes/:id', (req, res) => {
     }
 });
 
-app.get('/api/dispositivos', (req, res) => res.json(Object.values(dispositivosData)));
+app.get('/api/dispositivos', (req, res) => {
+    res.json(Array.from(dispositivosData.keys()))
+})
 
-app.listen(3000, () => console.log('🚀 Servidor con persistencia en puerto 3000'));
+app.get('/api/dispositivos/:id', (req, res) => {
+    const id = req.params.id;
+    console.log(id)
+    if(dispositivosData.has(id)) {
+        res.json(dispositivosData.get(id))
+    } else {
+        res.json("No se ha encontrado ese id")
+    }
+})
+
+app.listen(process.env.SERVER_PORT, () => console.log('🚀 Servidor con persistencia en puerto '));
