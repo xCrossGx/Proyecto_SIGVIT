@@ -34,10 +34,28 @@ const updatePatient = async (cedula, updatedPatient) => {
         const patients = await readPatients()
         const index = patients.findIndex(p => p.cedula === cedula)
         if (index !== -1) {
-            const sanitizedPatient = Object.fromEntries(Object.entries(updatedPatient).filter(([_, value]) => value !== undefined));
+            const sanitizedPatient = Object.fromEntries(Object.entries(updatedPatient).filter(([_, value]) => value !== undefined))
             patients[index] = { ...patients[index], ...sanitizedPatient }
+            await fs.writeFile(path, JSON.stringify(patients, null, 2))
+            return patients[index]
+        }
+        return false;
+    } catch(error) {
+        console.error("Error:", error);
+        return false;
+    }
+}
+
+const deletePatient = async (cedula) => {
+    try {
+        const patients = await readPatients()
+        const index = patients.findIndex(p => p.cedula === cedula)
+        if (index !== -1) {
+            patients.splice(index, 1)
             await fs.writeFile(path, JSON.stringify(patients, null, 2));
-        }   
+            return true;
+        }
+        return false;
     } catch(error) {
         console.error("Error:", error);
         return false;
@@ -47,5 +65,6 @@ const updatePatient = async (cedula, updatedPatient) => {
 module.exports = {
     readPatients, 
     savePatient,
-    updatePatient
+    updatePatient,
+    deletePatient
 }

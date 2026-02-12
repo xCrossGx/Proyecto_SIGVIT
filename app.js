@@ -1,14 +1,17 @@
-const { readPatients, savePatient, updatePatient } = require('./file_manager')
+const { readPatients, savePatient, updatePatient, deletePatient } = require('./file_manager')
 const express = require('express');
 const mqtt = require('mqtt');
+
 require('dotenv').config()
+const mqttHost = process.env.MQTT_HOST || "localhost"
+const mqttPort = process.env.MQTT_PORT || 1883
+const serverPort = process.env.SERVER_PORT || 3000
 
 const app = express();
 app.use(express.json());
 
 let dispositivosData = new Map(); 
-const mqttHost = process.env.MQTT_HOST || "localhost"
-const mqttPort = process.env.MQTT_PORT || 1883
+
 const client = mqtt.connect('mqtt://'+mqttHost+':'+mqttPort, {username: process.env.MQTT_USERNAME, password: process.env.MQTT_PASSWORD});; 
 
 client.on('connect', () => {
@@ -34,12 +37,9 @@ client.on('message', (topic, message) => {
     } catch (e) { console.log("Error MQTT"); }
 });
 
-// --- ENDPOINTS MODIFICADOS PARA USAR EL ARCHIVO ---
-
 app.get('/api/pacientes', async (req, res) => {
-    const pacientes = await readPatients(); // Lee del archivo antes de enviar
-    console.log(pacientes)
-    res.json(pacientes);
+    const pacientes = await readPatients();
+    res.status(200).json(pacientes);
 });
 
 app.post('/api/pacientes', async (req, res) => {
@@ -59,25 +59,12 @@ app.post('/api/pacientes', async (req, res) => {
         fechaRegistro: new Date().toISOString()
     };
     
-    const isSaved = await savePatient(nuevoPaciente)
+    const result = await savePatient(nuevoPaciente)
 
-    if (isSaved) {
+    if (result) {
         res.status(201).send("Paciente registrado con éxito.");
     } else {
         res.status(400).send("El paciente ya existe o hubo un error.");
-    }
-});
-
-app.put('/api/pacientes/:id', (req, res) => {
-    let pacientes = leerArchivo();
-    const index = pacientes.findIndex(p => p.id == req.params.id);
-
-    if (index !== -1) {
-        pacientes[index] = { ...pacientes[index], ...req.body };
-        guardarArchivo(pacientes); // Guardar cambios
-        res.json(pacientes[index]);
-    } else {
-        res.status(404).json({ error: "No encontrado" });
     }
 });
 
@@ -91,34 +78,36 @@ app.patch('/api/pacientes/:cedula', async (req, res) => {
         fechaNacimiento,
     };
 
-    await updatePatient(cedula, nuevoPaciente)
-    res.json("Fino")
+    const result = await updatePatient(cedula, nuevoPaciente)
+    if(result) {
+       res.status(200).json(result)
+    } else {
+        res.status(204).json("El paciente no existe o hubo un error.")
+    }
 })
 
-app.delete('/api/pacientes/:id', (req, res) => {
-    let pacientes = leerArchivo();
-    const nuevosPacientes = pacientes.filter(p => p.id != req.params.id);
-
-    if (pacientes.length !== nuevosPacientes.length) {
-        guardarArchivo(nuevosPacientes); // Guardar lista actualizada
-        res.json({ mensaje: "Eliminado" });
+app.delete('/api/pacientes/:cedula', async (req, res) => {
+    const cedula = Number(req.params.cedula)
+    const result = await deletePatient(cedula);
+    if(result) {
+        res.json("Eliminado correctamente.")
     } else {
-        res.status(404).json({ error: "No encontrado" });
+        res.status(404).json("El paciente ya no existe o nunca existió.")
     }
 });
 
 app.get('/api/dispositivos', (req, res) => {
-    res.json(Array.from(dispositivosData.keys()))
+    res.status(200).json(dispositivosData)
 })
 
 app.get('/api/dispositivos/:id', (req, res) => {
     const id = req.params.id;
     console.log(id)
     if(dispositivosData.has(id)) {
-        res.json(dispositivosData.get(id))
+        res.status(200).json(dispositivosData.get(id))
     } else {
-        res.json("No se ha encontrado ese id")
+        res.status(404).json("No se ha encontrado el id")
     }
 })
 
-app.listen(process.env.SERVER_PORT, () => console.log('🚀 Servidor con persistencia en puerto '));
+app.listen(serverPort, () => console.log('🚀 Servidor con persistencia en puerto '));
