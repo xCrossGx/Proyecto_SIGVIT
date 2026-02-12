@@ -1,33 +1,11 @@
+const { readPatients, savePatient, updatePatient } = require('./file_manager')
 const express = require('express');
 const mqtt = require('mqtt');
-const fs = require('fs'); // <--- 1. Importar el módulo de archivos
-const path = './pacientes.json'; // Nombre del archivo
 require('dotenv').config()
 
 const app = express();
 app.use(express.json());
 
-// --- FUNCIONES DE AYUDA (Lectura/Escritura) ---
-
-const leerArchivo = () => {
-    try {
-        const data = fs.readFileSync(path, 'utf8');
-        return JSON.parse(data);
-    } catch (error) {
-        // Si el archivo no existe, devolvemos un array vacío
-        return [];
-    }
-};
-
-const guardarArchivo = (data) => {
-    try {
-        fs.writeFileSync(path, JSON.stringify(data, null, 2));
-    } catch (error) {
-        console.error("Error al guardar el archivo:", error);
-    }
-};
-
-// --- MQTT (Se mantiene igual) ---
 let dispositivosData = new Map(); 
 const mqttHost = process.env.MQTT_HOST || "localhost"
 const mqttPort = process.env.MQTT_PORT || 1883
@@ -58,46 +36,36 @@ client.on('message', (topic, message) => {
 
 // --- ENDPOINTS MODIFICADOS PARA USAR EL ARCHIVO ---
 
-app.get('/api/pacientes', (req, res) => {
-    const pacientes = leerArchivo(); // Lee del archivo antes de enviar
+app.get('/api/pacientes', async (req, res) => {
+    const pacientes = await readPatients(); // Lee del archivo antes de enviar
+    console.log(pacientes)
     res.json(pacientes);
 });
 
-app.post('/api/pacientes', (req, res) => {
-    const pacientes = leerArchivo(); // 1. Cargamos la lista actual desde el archivo
-    const { nombre, apellido, cedula, fecha_nac } = req.body;
+app.post('/api/pacientes', async (req, res) => {
+    console.log(req.body)
+    const { cedula, nombre, apellido, fechaNacimiento } = req.body;
 
     // Validación de campos obligatorios
     if (!nombre || !cedula) {
         return res.status(400).json({ error: "Faltan datos obligatorios (nombre o cedula)" });
     }
-
-    // --- NUEVA VALIDACIÓN DE CÉDULA ---
-    // Buscamos si ya existe alguien con la misma cédula
-    const existe = pacientes.some(p => p.cedula === cedula);
-
-    if (existe) {
-        console.log(`⚠️ Intento de duplicado: La cédula ${cedula} ya existe.`);
-        return res.status(400).json({ 
-            error: "Operación fallida", 
-            mensaje: "Ya existe un paciente registrado con esta cédula." 
-        });
-    }
-    // ----------------------------------
-
-    const nuevoPaciente = { 
-        id: Date.now(), 
+    
+    const nuevoPaciente = {
+        cedula,
         nombre, 
-        apellido, 
-        cedula, 
-        fecha_nac 
+        apellido,  
+        fechaNacimiento,
+        fechaRegistro: new Date().toISOString()
     };
     
-    pacientes.push(nuevoPaciente); 
-    guardarArchivo(pacientes); // 3. Guardamos en el archivo físico
+    const isSaved = await savePatient(nuevoPaciente)
 
-    console.log("👤 Nuevo paciente registrado con éxito:", nombre);
-    res.status(201).json(nuevoPaciente);
+    if (isSaved) {
+        res.status(201).send("Paciente registrado con éxito.");
+    } else {
+        res.status(400).send("El paciente ya existe o hubo un error.");
+    }
 });
 
 app.put('/api/pacientes/:id', (req, res) => {
@@ -112,6 +80,20 @@ app.put('/api/pacientes/:id', (req, res) => {
         res.status(404).json({ error: "No encontrado" });
     }
 });
+
+app.patch('/api/pacientes/:cedula', async (req, res) => {
+    const cedula = Number(req.params.cedula);
+    const { nombre, apellido, fechaNacimiento } = req.body;
+    
+    const nuevoPaciente = {
+        nombre, 
+        apellido,  
+        fechaNacimiento,
+    };
+
+    await updatePatient(cedula, nuevoPaciente)
+    res.json("Fino")
+})
 
 app.delete('/api/pacientes/:id', (req, res) => {
     let pacientes = leerArchivo();
