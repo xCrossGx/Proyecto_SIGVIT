@@ -97,12 +97,16 @@ app.delete('/api/pacientes/:cedula', async (req, res) => {
 });
 
 app.get('/api/dispositivos', (req, res) => {
-    res.status(200).json(dispositivosData)
+    const array = Array.from(dispositivosData, ([mac, data]) => ({ 
+        mac, 
+        ...data 
+    }));
+
+    res.status(200).json(array)
 })
 
 app.get('/api/dispositivos/:id', (req, res) => {
     const id = req.params.id;
-    console.log(id)
     if(dispositivosData.has(id)) {
         res.status(200).json(dispositivosData.get(id))
     } else {
