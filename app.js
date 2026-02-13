@@ -19,13 +19,26 @@ client.on('connect', () => {
     client.subscribe('devices/#'); 
 });
 
+const startTimestampMs = Date.now()
+const simularSensores = () => {
+    setInterval( () => {
+        dispositivosData.set("AB:CD:EF:GH:" + Math.floor((Math.random() * (20 - 10)) + 10), {
+            timestamp: (Date.now() - startTimestampMs),
+            data: {
+                temp1: Math.round((Math.random() * (60 - 10)) + 10),
+                temp2: Math.round((Math.random() * (60 - 10)) + 10)
+            } 
+        })
+    }, 1000)
+}
+
 client.on('message', (topic, message) => {
     try {
         const payload = JSON.parse(message.toString());
-        const id = payload.mac
+        const mac = payload.mac
         
-        if(id) {
-            dispositivosData.set(id, {
+        if(mac) {
+            dispositivosData.set(mac, {
                 timestamp: payload.timestamp,
                 data: {
                     temp1: payload.data.temp1,
@@ -114,4 +127,5 @@ app.get('/api/dispositivos/:id', (req, res) => {
     }
 })
 
+simularSensores()
 app.listen(serverPort, () => console.log('🚀 Servidor con persistencia en puerto '));

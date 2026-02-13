@@ -1,30 +1,30 @@
 [
   {
-    "id": 1706712345678,
+    "cedula": 5474421,
+    "nombre": "Omar",
+    "apellido": "Zabala",
+    "fechaNacimiento": "1995-03-05",
+    "fechaRegistro": "2026-02-13T02:11:25.003Z"
+  },
+  {
+    "cedula": 12428608,
     "nombre": "Ana",
-    "apellido": "García",
-    "cedula": "25.888.999",
-    "fecha_nacimiento": "1985-12-01"
+    "apellido": "Perez",
+    "fechaNacimiento": "2007-03-12",
+    "fechaRegistro": "2026-02-13T02:12:12.367Z"
   },
   {
-    "id": 1706712345679,
-    "nombre": "Luis",
-    "apellido": "Rodríguez",
-    "cedula": "12.333.444",
-    "fecha_nacimiento": "1978-03-22"
+    "cedula": 30058608,
+    "nombre": "Victoria",
+    "apellido": "Marcano",
+    "fechaNacimiento": "2004-01-25",
+    "fechaRegistro": "2026-02-13T02:12:46.013Z"
   },
   {
-    "id": 1769893765466,
-    "nombre": "Andrés",
-    "apellido": "Mendoza",
-    "cedula": "20.123.456",
-    "fecha_nac": "1990-05-15"
-  },
-  {
-    "id": 1769893996814,
-    "nombre": "Andrés",
-    "apellido": "Mendoza",
-    "cedula": "20.123.458",
-    "fecha_nac": "1990-05-15"
+    "cedula": 31690875,
+    "nombre": "Omar",
+    "apellido": "Zabala",
+    "fechaNacimiento": "2005-05-22",
+    "fechaRegistro": "2026-02-13T02:22:53.324Z"
   }
 ]
