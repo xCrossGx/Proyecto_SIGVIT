@@ -20,5 +20,6 @@
             "database": "signosvit_db",
             "username": "signosvit"
         }
-    ]
+    ],
+    "postman.settings.dotenv-detection-notification-visibility": false
 }

@@ -13,6 +13,8 @@ const POSTGRES_USER = process.env.POSTGRES_USER || 'postgres';
 const POSTGRES_PASSWORD = process.env.POSTGRES_PASSWORD || 'postgres';
 const POSTGRES_DB = process.env.POSTGRES_DB || 'postgres';
 
+export const JWT_SECRET = process.env.JWT_SECRET || 'tu_clave_super_secreta'; 
+
 export const POSTGRES_CONFIG = {
     host: POSTGRES_HOST,
     port: POSTGRES_PORT,
@@ -22,3 +24,6 @@ export const POSTGRES_CONFIG = {
 }
 
 export const SERVER_PORT = process.env.SERVER_PORT || 3000;
+const SERVER_HOST = process.env.SERVER_HOST || 'localhost';
+
+export const SERVER_URL = `http://${SERVER_HOST}:${SERVER_PORT}`;

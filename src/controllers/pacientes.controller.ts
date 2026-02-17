@@ -5,6 +5,9 @@ const router = Router();
 import { getPacientes, getPaciente, createPaciente, deletePaciente, updatePaciente } from '../services/pacientes.service.js';
 import type { CreatePaciente, UpdatePaciente } from '../dtos/paciente.dto.js';
 import consultasController from './consultas.controller.js';
+import { authenticateJWT } from '../auth/auth.middleware.js';
+
+router.use(authenticateJWT)
 
 router.get('/', async (req, res) => {
     const pacientes = await getPacientes()

@@ -1,7 +1,10 @@
 import express from 'express';
 import { getData, getDeviceData } from '../services/dispositivos.service.js';
+import { authenticateJWT } from '../auth/auth.middleware.js';
 
 const router = express.Router();
+
+router.use(authenticateJWT)
 
 router.get('/', (req, res) => {
     const array = Array.from(getData(), ([mac, data]) => ({ 

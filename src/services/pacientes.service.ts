@@ -18,7 +18,7 @@ export const getPacientes = async () => {
 }
 
 export const getPaciente = async (cedula: string) => {
-    return await db.oneOrNone(`SELECT * FROM pacientes WHERE cedula = $1`, [cedula])
+    return await db.one(`SELECT * FROM pacientes WHERE cedula = $1`, [cedula])
     .then(result => {
         return result
     })
