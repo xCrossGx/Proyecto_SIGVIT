@@ -1,23 +1,30 @@
 {
+  "name": "proyecto_sigvit",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "xCrossGx",
+  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "start:dev": "nodemon app.js",
-    "simular": "node simulador_sensores.js"
+    "build": "tsc",
+    "start": "node ./dist/app.js",
+    "start:dev": "nodemon --watch 'src/**' --ext 'ts,json' --exec 'tsx src/app.ts'"
   },
-
-  "nodemonConfig": {
-    "ignore": ["pacientes.json"]
-  },
-
-
   "dependencies": {
-    "dotenv": "^17.2.4",
+    "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "mqtt": "^5.15.0",
-    "pg": "^8.18.0"
+    "pg-promise": "^12.6.1"
   },
-
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.3",
+    "eslint": "^10.0.0",
+    "nodemon": "^3.1.11",
+    "prettier": "^3.8.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   }
 }
