@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createUsuario, verifyUsuario } from "./auth.service.js";
+import { createUsuario, revokeToken, verifyUsuario } from "./auth.service.js";
 import type { CreateUsuario } from "./auth.dto.js";
 import { authenticateJWT } from "./auth.middleware.js";
 
@@ -15,6 +15,16 @@ router.post('/register', async (req, res) => {
     const usuario: CreateUsuario = req.body
     const result = await createUsuario(usuario);
     res.json(result);
+})
+
+router.post('/logout', authenticateJWT, async(req, res) => {
+    const authHeader = req.headers.authorization;
+    if(authHeader) {
+        const token = authHeader.split(' ')[1]!;
+        const result = await revokeToken(token)
+        res.json(result);
+    }
+    
 })
 
 export default router;

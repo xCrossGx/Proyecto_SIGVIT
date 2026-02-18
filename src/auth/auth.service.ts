@@ -6,6 +6,17 @@ import { generateToken } from "./jwt.js"
 
 const SALT_ROUNDS = 10
 
+export const inBlacklist = async (token: string) => {
+    const sql = `SELECT 1 FROM blacklist_token WHERE token = $1`
+    return await db.one(sql, [token])
+    .then( () => {
+        return true
+    })
+    .catch( () => {
+        return false
+    })
+}
+
 export const verifyUsuario = async (email: string, password: string) => {
     const sql = `SELECT uuid, password_hash, cedula FROM usuarios WHERE email = $1`
     const usuario = await db.oneOrNone(sql, [email])
@@ -32,5 +43,16 @@ export const createUsuario = async (usuario: CreateUsuario) => {
     })
     .catch(error => {
         return error;
+    })
+}
+
+export const revokeToken = async (token: string) => {
+    const sql = `INSERT INTO blacklist_token(token) VALUES ($1) RETURNING 1`
+    return await db.one(sql, [token])
+    .then( () => {
+        return {message: "Sesión cerrada"}
+    })
+    .catch( error => {
+        return { type: "error", message: error.message}
     })
 }
