@@ -36,7 +36,7 @@ export const verifyUsuario = async (email: string, password: string) => {
 export const createUsuario = async (usuario: CreateUsuario) => {
     const password_hash = await bcrypt.hash(usuario.password, SALT_ROUNDS);
     const sql = `INSERT INTO usuarios(username, email, password_hash, cedula, nombre, apellido) 
-    VALUES ($1, $2, $3, $4, $5, $6)`
+    VALUES ($1, $2, $3, $4, $5, $6) RETURNING username`
     return await db.oneOrNone(sql, [usuario.username, usuario.email, password_hash, usuario.cedula, usuario.nombre, usuario.apellido])
     .then(result => {
         return result;
