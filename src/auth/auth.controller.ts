@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createUsuario, revokeToken, verifyUsuario, resetPassword } from "./auth.service.js";
+import { createUsuario, revokeToken, verifyUsuario, resetPassword, getUsuarioByUuid } from "./auth.service.js";
 import type { CreateUsuario } from "./auth.dto.js";
 import { authenticateJWT } from "./auth.middleware.js";
 
@@ -27,8 +27,8 @@ router.post('/logout', authenticateJWT, async (req, res) => {
     const authHeader = req.headers.authorization;
     if (authHeader) {
         // Obtenemos el token quitando la palabra 'Bearer '
-        const token = authHeader.split(' ')[1]; 
-        
+        const token = authHeader.split(' ')[1];
+
         if (token) {
             const result = await revokeToken(token);
             return res.json(result);
@@ -46,4 +46,16 @@ router.post('/forgot-password', async (req, res) => {
         res.status(400).json({ message: err.message });
     }
 });
+
+router.get('/me', authenticateJWT, async (req, res) => {
+    try {
+        const uuid = (req as any).user?.uuid;
+        if (!uuid) return res.status(401).json({ message: 'No autenticado' });
+        const usuario = await getUsuarioByUuid(uuid);
+        res.json(usuario);
+    } catch (err: any) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 export default router;
