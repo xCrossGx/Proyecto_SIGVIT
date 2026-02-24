@@ -1,4 +1,4 @@
-import type { CreateConsulta } from '../dtos/consulta.dto.js';
+import type { Consulta, CreateConsulta } from '../dtos/consulta.dto.js';
 import { db } from '../utils/database_manager.js';
 import { customAlphabet } from 'nanoid';
 
@@ -24,17 +24,21 @@ export const getConsulta = async (cedula: string, id: string) => {
     })
 }
 
-export const createConsulta = async (consulta: CreateConsulta) => {
-    // la cedula del medico la obtiene de la sesion.
+export const createConsulta = async (consulta: CreateConsulta): Promise<Consulta | any> => {
     const id = nanoid();
-    const sql = `INSERT INTO consultas(id, cedula_paciente, cedula_medico, descripcion) VALUES ($1, $2, $3, $4) RETURNING *`
-    return await db.oneOrNone(sql, [id, consulta.cedula_paciente, consulta.cedula_medico, consulta.descripcion])
-    .then( result => {
-        return result;
-    })
-    .catch( error => {
-        return { "type": "error", "message": error.message }
-    })
+    // Usamos fecha_consulta para coincidir con el DTO
+    const sql = `
+        INSERT INTO consultas(id, cedula_paciente, cedula_medico, descripcion, fecha_consulta) 
+        VALUES ($1, $2, $3, $4, CURRENT_TIMESTAMP) 
+        RETURNING *`
+    
+    return await db.oneOrNone(sql, [
+        id,
+        consulta.cedula_paciente, 
+        consulta.cedula_medico, 
+        consulta.descripcion,
+        consulta.fecha_consulta
+    ]).catch(error => ({ "type": "error", "message": error.message }));
 }
 
 export const deleteConsulta = async (cedulaPaciente: string, idConsulta: string) => {
