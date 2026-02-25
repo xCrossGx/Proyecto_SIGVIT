@@ -3,7 +3,7 @@ import logger from '../utils/logger.js';
 import { SERVER_ENV } from '../utils/config.js';
 
 morgan.token('body', (req: any) => {
-  if (Object.keys(req.body).length > 0) {
+  if (req.body && Object.keys(req.body).length > 0) {
     // CLAVE: Filtramos datos sensibles
     const bodyClone = { ...req.body };
     const sensitiveFields = ['password', 'token', 'credit_card'];
