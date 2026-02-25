@@ -8,8 +8,10 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node ./dist/app.js",
-    "start:dev": "nodemon --watch 'src/**' --ext 'ts,json' --exec 'tsx src/app.ts'"
+    "start": "NODE_ENV=production node ./dist/app.js",
+    "start:dev": "NODE_ENV=development npx nodemon --watch 'src/**' --ext 'ts,json' --exec 'npx tsx src/app.ts'",
+    "start:debug": "NODE_ENV=debug npx nodemon --watch 'src/**' --ext 'ts,json' --exec 'npx tsx src/app.ts'"
+    
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -17,16 +19,19 @@
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.10.1",
     "mqtt": "^5.15.0",
     "nanoid": "^5.1.6",
-    "pg-promise": "^12.6.1"
+    "pg-promise": "^12.6.1",
+    "winston": "^3.19.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
-    "@types/node": "^25.2.3",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^25.3.0",
     "eslint": "^10.0.0",
     "nodemon": "^3.1.11",
     "prettier": "^3.8.1",

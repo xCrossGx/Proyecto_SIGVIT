@@ -1,0 +1,409 @@
+{"level":"info","message":"Servidor corriendo","timestamp":"2026-02-25T20:23:03.587Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:26:55.108Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:26:55.109Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:26:55.109Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:26:55.109Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:26:55.109Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:27:20.560Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:27:20.561Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:27:20.561Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:27:20.561Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:27:20.561Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:27:44.561Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:27:44.563Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:27:44.564Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:27:44.564Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:27:44.564Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:27:50.060Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:27:50.062Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:27:50.062Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:27:50.062Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:27:50.063Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:28:31.847Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:28:31.848Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:28:31.848Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:28:31.848Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:28:31.848Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:28:42.025Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:28:42.026Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:28:42.026Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:28:42.027Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:28:42.027Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:28:55.197Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:28:55.198Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:28:55.199Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:28:55.200Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:28:55.201Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:28:59.120Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:28:59.121Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:28:59.121Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:28:59.121Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:28:59.122Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:30:34.800Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:30:34.800Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:30:34.801Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:30:34.801Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:30:34.801Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:36:40.246Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:36:40.247Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:36:40.248Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:36:40.248Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:36:40.248Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:39:56.872Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:39:56.873Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:39:56.873Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:39:56.873Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:39:56.874Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:40:30.801Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:40:30.802Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:40:30.802Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:40:30.803Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:40:30.803Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:40:38.607Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:40:38.608Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:40:38.608Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:40:38.608Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:40:38.608Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:47:41.452Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:47:41.453Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:47:41.453Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:47:41.454Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:47:41.454Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T20:49:40.074Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:49:40.091Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:49:40.091Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:49:40.092Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:49:40.092Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:49:40.092Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T20:49:59.950Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:49:59.959Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:49:59.960Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:49:59.960Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:49:59.960Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:49:59.960Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T20:53:42.562Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:53:42.571Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:53:42.571Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:53:42.571Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:53:42.572Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:53:42.572Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T20:54:36.863Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:54:36.872Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T20:54:36.872Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T20:54:36.872Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T20:54:36.873Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T20:54:36.873Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:01:16.526Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:01:16.534Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:01:16.534Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:01:16.534Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:01:16.535Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:01:16.535Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:06:01.205Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:06:01.213Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:06:01.214Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:06:01.214Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:06:01.214Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:06:01.214Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:06:25.182Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:06:25.194Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:06:25.195Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:06:25.195Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:06:25.195Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:06:25.196Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:06:48.925Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:06:48.934Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:06:48.934Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:06:48.935Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:06:48.935Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:06:48.935Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:07:06.644Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:07:06.687Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:07:06.688Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:07:06.688Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:07:06.688Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:07:06.688Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:08:31.831Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:08:31.832Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:08:31.832Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:08:31.833Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:08:31.833Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:08:31.841Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:09:07.305Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:09:07.305Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:09:07.306Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:09:07.306Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:09:07.306Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:09:07.313Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:09:49.257Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:09:49.258Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:09:49.258Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:09:49.259Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:09:49.259Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:09:49.265Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:11:54.847Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:11:54.848Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:11:54.848Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:11:54.848Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:11:54.848Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:11:54.857Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:14:25.855Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:14:25.856Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:14:25.856Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:14:25.857Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:14:25.857Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:14:25.864Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:14:45.210Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:14:45.211Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:14:45.212Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:14:45.212Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:14:45.212Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:14:45.219Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:15:56.652Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:15:56.653Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:15:56.653Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:15:56.654Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:15:56.654Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:15:56.662Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:17:33.226Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:17:33.227Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:17:33.227Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:17:33.227Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:17:33.227Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:17:33.235Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:17:46.092Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:17:46.092Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:17:46.093Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:17:46.093Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:17:46.093Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:17:46.100Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:18:36.024Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:18:36.025Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:18:36.025Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:18:36.025Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:18:36.026Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:18:36.035Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:20:30.074Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:20:30.074Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:20:30.075Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:20:30.075Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:20:30.075Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:20:30.083Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:20:41.610Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:20:41.611Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:20:41.612Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:20:41.612Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:20:41.612Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:20:41.620Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:21:23.284Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEVELOPMENT","timestamp":"2026-02-25T21:21:23.285Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:21:23.286Z"}
+{"level":"info","message":"  Nivel de log activo: http","timestamp":"2026-02-25T21:21:23.286Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:21:23.286Z"}
+{"level":"info","message":"Usando MQTT","timestamp":"2026-02-25T21:21:23.294Z"}
+{"level":"http","message":"GET /dispositivos 401 45 - 110.906 ms","timestamp":"2026-02-25T21:21:40.334Z"}
+{"level":"http","message":"POST /auth/login 200 228 - 94.898 ms","timestamp":"2026-02-25T21:21:46.602Z"}
+{"level":"http","message":"GET /dispositivos 200 85 - 3.112 ms","timestamp":"2026-02-25T21:21:50.693Z"}
+{"level":"http","message":"GET /dispositivos 200 85 - 2.119 ms","timestamp":"2026-02-25T21:21:58.345Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:22:10.678Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:22:10.687Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:22:10.687Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:22:10.687Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:22:10.687Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:22:10.688Z"}
+{"level":"http","message":"GET /dispositivos 200 2 - 23.126 ms","timestamp":"2026-02-25T21:22:13.051Z"}
+{"level":"http","message":"GET /dispositivos 200 140 - 8.979 ms","timestamp":"2026-02-25T21:22:19.229Z"}
+{"level":"http","message":"GET /dispositivos 200 140 - 1.493 ms","timestamp":"2026-02-25T21:22:22.458Z"}
+{"level":"http","message":"GET /dispositivos 200 140 - 1.440 ms","timestamp":"2026-02-25T21:22:27.401Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:24:20.068Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:24:20.076Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:24:20.077Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:24:20.077Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:24:20.077Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:24:20.077Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:24:40.991Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:24:40.999Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:24:40.999Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:24:40.999Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:24:41.000Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:24:41.000Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:24:52.770Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:24:52.779Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:24:52.779Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:24:52.779Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:24:52.780Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:24:52.780Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:29:19.249Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:29:19.257Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:29:19.257Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:29:19.257Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:29:19.258Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:29:19.258Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:29:29.198Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:29:29.209Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:29:29.209Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:29:29.209Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:29:29.210Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:29:29.210Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:29:43.791Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:29:43.802Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:29:43.802Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:29:43.802Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:29:43.802Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:29:43.803Z"}
+{"level":"http","message":"GET /pacientes/5474421/consultas/ 200 2 - 80.041 ms","timestamp":"2026-02-25T21:30:09.633Z"}
+{"level":"http","message":"GET /consultas/ 400 58 - 9.947 ms","timestamp":"2026-02-25T21:30:24.285Z"}
+{"level":"http","message":"GET /consultas/5474421 200 0 - 5.601 ms","timestamp":"2026-02-25T21:30:31.797Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:31:10.819Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:31:10.827Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:31:10.827Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:31:10.827Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:31:10.827Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:31:10.828Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:31:25.254Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:31:25.263Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:31:25.263Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:31:25.263Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:31:25.263Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:31:25.264Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:33:16.560Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:33:16.568Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:33:16.568Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:33:16.569Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:33:16.569Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:33:16.569Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:35:46.107Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:35:46.117Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:35:46.117Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:35:46.117Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:35:46.118Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:35:46.118Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:36:13.293Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:36:13.301Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:36:13.302Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:36:13.302Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:36:13.302Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:36:13.303Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:36:16.690Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:36:16.698Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:36:16.698Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:36:16.698Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:36:16.698Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:36:16.699Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:40:54.851Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:40:54.858Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:40:54.859Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:40:54.859Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:40:54.859Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:40:54.859Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:48:09.515Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:48:09.526Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:48:09.526Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:48:09.527Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:48:09.527Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:48:09.527Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:49:33.420Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:49:33.428Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:49:33.428Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:49:33.428Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:49:33.429Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:49:33.429Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:50:02.957Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:50:02.965Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:50:02.965Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:50:02.966Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:50:02.966Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:50:02.966Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:57:27.931Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:57:27.941Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:57:27.941Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:57:27.942Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:57:27.942Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:57:27.942Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:57:51.882Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:57:51.897Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:57:51.897Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:57:51.898Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:57:51.898Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:57:51.899Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T21:58:18.197Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:58:18.205Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T21:58:18.206Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T21:58:18.206Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T21:58:18.206Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T21:58:18.206Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T22:05:28.835Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:05:28.844Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T22:05:28.844Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T22:05:28.846Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T22:05:28.847Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:05:28.847Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T22:06:06.148Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:06:06.160Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T22:06:06.160Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T22:06:06.161Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T22:06:06.168Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:06:06.169Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T22:12:41.932Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:12:41.942Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T22:12:41.942Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T22:12:41.942Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T22:12:41.943Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:12:41.943Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T22:18:20.550Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:18:20.559Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T22:18:20.559Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T22:18:20.560Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T22:18:20.560Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:18:20.560Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T22:23:34.395Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:23:34.404Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T22:23:34.404Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T22:23:34.404Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T22:23:34.405Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:23:34.405Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T22:26:39.279Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:26:39.288Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T22:26:39.288Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T22:26:39.288Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T22:26:39.288Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:26:39.289Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T22:26:46.699Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:26:46.707Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T22:26:46.707Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T22:26:46.707Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T22:26:46.708Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:26:46.708Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T22:26:49.210Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:26:49.219Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T22:26:49.220Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T22:26:49.220Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T22:26:49.220Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:26:49.220Z"}
+{"level":"http","message":"GET /pacientes 401 40 - 97.099 ms","timestamp":"2026-02-25T22:33:48.252Z"}
+{"level":"http","message":"POST /auth/login 200 228 - 64.572 ms","timestamp":"2026-02-25T22:33:53.292Z"}
+{"level":"http","message":"GET /pacientes 200 148 - 14.335 ms","timestamp":"2026-02-25T22:33:57.078Z"}
+{"level":"http","message":"GET /dispositivos 200 140 - 14.726 ms","timestamp":"2026-02-25T22:34:16.469Z"}
+{"level":"http","message":"POST /pacientes/5474421/consultas/ 404 51 - 7.904 ms","timestamp":"2026-02-25T22:34:25.250Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T22:43:30.771Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:43:30.788Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T22:43:30.788Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T22:43:30.789Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T22:43:30.789Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:43:30.789Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T22:43:56.802Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:43:56.810Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T22:43:56.810Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T22:43:56.810Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T22:43:56.810Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:43:56.811Z"}
+{"level":"debug","message":"Generando datos aleatorios","timestamp":"2026-02-25T22:44:20.673Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:44:20.681Z"}
+{"level":"info","message":"  SERVIDOR CORRIENDO EN MODO: DEBUG","timestamp":"2026-02-25T22:44:20.682Z"}
+{"level":"info","message":"  Puerto: 3000","timestamp":"2026-02-25T22:44:20.682Z"}
+{"level":"info","message":"  Nivel de log activo: debug","timestamp":"2026-02-25T22:44:20.682Z"}
+{"level":"info","message":"=============================================","timestamp":"2026-02-25T22:44:20.682Z"}
+{"level":"http","message":"POST /pacientes 201 - 55.573 ms \n  Body: {\n  \"cedula\": \"5474421\",\n  \"nombre\": \"Omar\",\n  \"apellido\": \"Zabala\",\n  \"fecha_nacimiento\": \"1997-03-11\"\n}","timestamp":"2026-02-25T22:44:35.569Z"}
+{"level":"http","message":"POST /auth/register 500 - 95.105 ms \n  Body: {\n  \"username\": \"omarzl\",\n  \"email\": \"omar2@signosvit.com\",\n  \"password\": \"******\",\n  \"cedula\": \"32690875\",\n  \"nombre\": \"Omar\",\n  \"apellido\": \"Zabala\"\n}","timestamp":"2026-02-25T22:44:54.115Z"}
+{"level":"http","message":"POST /pacientes 201 - 13.323 ms \n  Body: {\n  \"cedula\": \"5474421\",\n  \"nombre\": \"Omar\",\n  \"apellido\": \"Zabala\",\n  \"fecha_nacimiento\": \"1997-03-11\"\n}","timestamp":"2026-02-25T22:45:28.455Z"}
+{"level":"http","message":"POST /pacientes 201 - 2.084 ms \n  Body: {\n  \"cedula\": \"5474421\",\n  \"nombre\": \"Omar\",\n  \"apellido\": \"Zabala\",\n  \"fecha_nacimiento\": \"1997-03-11\"\n}","timestamp":"2026-02-25T22:45:36.764Z"}
