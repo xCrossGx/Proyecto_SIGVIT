@@ -1,4 +1,3 @@
-import { error } from "node:console"
 import { db } from "../utils/database_manager.js"
 import bcrypt from 'bcrypt'
 import type { CreateUsuario } from "./auth.dto.js"
@@ -21,13 +20,13 @@ export const verifyUsuario = async (email: string, password: string) => {
     const sql = `SELECT uuid, password_hash, cedula FROM usuarios WHERE email = $1`
     const usuario = await db.oneOrNone(sql, [email])
     if (!usuario) {
-        return { "type": "error", "message": "Correo no encontrado" }
+        return { "type": "error", "message": "Credenciales invalidas" }
     }
 
     const compare = await bcrypt.compare(password, usuario.password_hash)
 
     if (!compare) {
-        return { "type": "error", "message": "La contraseña no coincide" }
+        return { "type": "error", "message": "Credenciales invalidas" }
     }
     const token = generateToken({ uuid: usuario.uuid, cedula: usuario.cedula })
     return { "token": token };

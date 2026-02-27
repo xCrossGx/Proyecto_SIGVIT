@@ -8,6 +8,10 @@ const router = Router();
 router.post('/login', async (req, res) => {
     const { email, password } = req.body
     const verify = await verifyUsuario(email, password);
+    if(verify.type && verify.type === 'error') {
+        return res.status(400).json(verify)
+    } 
+    
     res.json(verify);
 })
 

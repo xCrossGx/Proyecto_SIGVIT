@@ -5,17 +5,23 @@
   "license": "ISC",
   "author": "xCrossGx",
   "type": "module",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "build": "tsc",
-    "start": "NODE_ENV=production node ./dist/app.js",
-    "start:dev": "NODE_ENV=development npx nodemon --watch 'src/**' --ext 'ts,json' --exec 'npx tsx src/app.ts'",
-    "start:debug": "NODE_ENV=debug npx nodemon --watch 'src/**' --ext 'ts,json' --exec 'npx tsx src/app.ts'"
-    
+    "start": "node ./dist/app.js",
+    "start:dev": "cross-env NODE_ENV=development npx nodemon",
+    "start:debug": "cross-env NODE_ENV=debug npx nodemon"
+  },
+  "nodemonConfig": {
+    "watch": ["src"],
+    "ext": "ts,json",
+    "ignore": ["src/**/*.spec.ts", "node_modules"],
+    "exec": "node --import tsx src/app.ts"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
+    "cross-env": "^10.1.0",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",

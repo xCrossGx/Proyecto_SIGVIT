@@ -14,9 +14,9 @@ const levels = {
 // - Development: info y http
 // - Debug: todo, incluyendo debug
 const getLevel = () => {
-  if (SERVER_ENV === 'production') return 'info';
+  if (SERVER_ENV === 'development') return 'http';
   if (SERVER_ENV === 'debug') return 'debug'; // Si lanzas con NODE_ENV=debug
-  return 'http'; // Por defecto para development
+  return 'info'; // Por defecto para production
 };
 
 const colors = {
