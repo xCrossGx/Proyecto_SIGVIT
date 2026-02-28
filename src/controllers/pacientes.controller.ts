@@ -9,7 +9,6 @@ router.use('/:cedula/consultas', consultasController);
 
 router.use(authenticateJWT)
 
-
 // GET: Obtener todos
 router.get('/', async (req, res) => {
     try {

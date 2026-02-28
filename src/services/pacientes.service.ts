@@ -1,6 +1,12 @@
 import type { CreatePaciente, UpdatePaciente } from '../dtos/paciente.dto.js'
 import { db } from '../utils/database_manager.js'
 
+export const checkPacienteExists = async (cedula: string) => {
+    return await db.one(`SELECT 1 FROM pacientes WHERE cedula = $1`, [cedula])
+    .then(() => true)
+    .catch(() => false)
+}
+
 export const getPacientes = async () => {
     return await db.manyOrNone(`SELECT * FROM pacientes`)
     .then(result => result)

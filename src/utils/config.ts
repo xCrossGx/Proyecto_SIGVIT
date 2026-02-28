@@ -23,6 +23,7 @@ export const POSTGRES_CONFIG = {
     database: POSTGRES_DB
 }
 
+export const SERVER_ENV = process.env.NODE_ENV || 'production';
 export const SERVER_PORT = process.env.SERVER_PORT || 3000;
 const SERVER_HOST = process.env.SERVER_HOST || 'localhost';
 

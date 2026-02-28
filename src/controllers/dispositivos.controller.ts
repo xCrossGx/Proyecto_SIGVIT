@@ -1,6 +1,8 @@
 import express from 'express';
 import { getData, getDeviceData } from '../services/dispositivos.service.js';
 import { authenticateJWT } from '../auth/auth.middleware.js';
+import { SERVER_ENV } from '../utils/config.js';
+import logger from '../utils/logger.js';
 
 const router = express.Router();
 
@@ -12,11 +14,15 @@ router.get('/', (req, res) => {
         ...data 
     }));
 
+    if(SERVER_ENV === 'debug') {
+        logger.debug(array.map(disp => disp.mac));
+    }
     res.json(array)
 })
 
 router.get('/:mac', (req, res) => {
     const mac = req.params.mac;
+    logger.debug(mac);
     const deviceData = getDeviceData(mac);
 
     if (deviceData) {

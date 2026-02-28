@@ -5,28 +5,39 @@
   "license": "ISC",
   "author": "xCrossGx",
   "type": "module",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "build": "tsc",
     "start": "node ./dist/app.js",
-    "start:dev": "nodemon --watch 'src/**' --ext 'ts,json' --exec 'tsx src/app.ts'"
+    "start:dev": "cross-env NODE_ENV=development npx nodemon",
+    "start:debug": "cross-env NODE_ENV=debug npx nodemon"
+  },
+  "nodemonConfig": {
+    "watch": ["src"],
+    "ext": "ts,json",
+    "ignore": ["src/**/*.spec.ts", "node_modules"],
+    "exec": "node --import tsx src/app.ts"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
+    "cross-env": "^10.1.0",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.10.1",
     "mqtt": "^5.15.0",
     "nanoid": "^5.1.6",
-    "pg-promise": "^12.6.1"
+    "pg-promise": "^12.6.1",
+    "winston": "^3.19.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
-    "@types/node": "^25.2.3",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^25.3.0",
     "eslint": "^10.0.0",
     "nodemon": "^3.1.11",
     "prettier": "^3.8.1",
