@@ -1,8 +1,8 @@
 import mqtt from 'mqtt';
-import { MQTT_HOST, MQTT_PASSWORD, MQTT_PORT, MQTT_USER } from '../utils/config.js';
+import { SERVER_ENV, MQTT_HOST, MQTT_PASSWORD, MQTT_PORT, MQTT_USER } from '../utils/config.js';
 import logger from '../utils/logger.js'
 
-const isDebug = process.env.NODE_ENV === 'debug'; // O 'development'
+const isDebug = SERVER_ENV === 'debug';
 
 export interface DeviceData {
     mac?: string; // Opcional porque a veces viene en el payload y otras es la llave del Map
@@ -18,7 +18,7 @@ export interface DeviceData {
 
 const data = new Map<string, DeviceData>();
 
-let mqttClient:mqtt.MqttClient | null = null;
+let mqttClient: mqtt.MqttClient | null = null;
 
 // Función auxiliar para generar aleatorios
 const randomRange = (min: number, max: number, decimals: number = 2): number => {
@@ -27,7 +27,7 @@ const randomRange = (min: number, max: number, decimals: number = 2): number => 
 };
 
 if (isDebug) {
-    
+
     logger.debug('Generando datos aleatorios');
     // Simulamos la llegada de datos cada 5 segundos
     setInterval(() => {
@@ -48,11 +48,11 @@ if (isDebug) {
 
 } else {
     // Configuración real de MQTT
-    mqttClient = mqtt.connect(MQTT_HOST, { 
-        protocol: 'mqtt', 
-        username: MQTT_USER, 
-        password: MQTT_PASSWORD, 
-        port: MQTT_PORT 
+    mqttClient = mqtt.connect(MQTT_HOST, {
+        protocol: 'mqtt',
+        username: MQTT_USER,
+        password: MQTT_PASSWORD,
+        port: MQTT_PORT
     });
 
     mqttClient.on('connect', () => {
@@ -61,7 +61,7 @@ if (isDebug) {
     });
 
     mqttClient.on('message', (topic, message) => {
-        try {  
+        try {
             const payload: DeviceData & { mac: string } = JSON.parse(message.toString());
             if (payload.mac) {
                 data.set(payload.mac, {
@@ -70,11 +70,11 @@ if (isDebug) {
                 });
             }
         } catch (error) {
-            logger.error('Error parseando mensaje MQTT: ', {error})      
+            logger.error('Error parseando mensaje MQTT: ', { error })
         }
     });
 
-    mqttClient.on('error', (error) => logger.error('Error de conexión:', {error}));
+    mqttClient.on('error', (error) => logger.error('Error de conexión:', { error }));
     mqttClient.on('offline', () => logger.error('El cliente está offline'));
 }
 
