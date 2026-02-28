@@ -19,10 +19,6 @@ app.use(morganMiddleware);
 
 // Tus rutas actuales
 app.use('/pacientes', pacientesController);
-<<<<<<< HEAD
-app.use('/consultas', consultasController);
-=======
->>>>>>> 79486ee272675c72b528ce3a2f25b7930c5d7c18
 app.use('/dispositivos', dispositivosController);
 app.use('/auth', authController);
 
